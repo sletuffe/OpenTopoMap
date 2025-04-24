@@ -662,7 +662,7 @@ CREATE OR REPLACE FUNCTION natural_arealabel(myosm_id IN BIGINT,myway IN GEOMETR
 --
   n:=ST_Length(retway);
   m:=ST_Length(ST_Intersection(retway,myway));
-  IF(m/n<0.80)THEN retway:=NULL; END IF;
+  IF(n=0.0 or m/n<0.80)THEN retway:=NULL; END IF;
 --
 -- initialize grid point with coordinates, check which grid point is in the area
 --
