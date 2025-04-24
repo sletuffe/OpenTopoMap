@@ -1,5 +1,7 @@
-<!-- Hillshaded maps, from zoom 1 to 9 merged with colored one, for zoom 10 and more, hillshades only -->
-
+<!-- 
+  Hillshaded maps, from zoom 1 to 8 merged with colored one, for zoom 9 and more, hillshades only 
+  Color by altitude will interfer with color of forest, residential, swamp, all natural areas.
+-->
 <Style name="hillshade">
 	<Rule>
 		&maxscale_zoom9;
@@ -15,8 +17,6 @@
 		<Parameter name="format">tiff</Parameter>
 	</Datasource>
 </Layer>
-
-<!-- Relief maps, colored by altitude (at zomm 10 and more, not shown anymore -->
 <Style name="relief">
 	<Rule>
 		&maxscale_zoom1;
