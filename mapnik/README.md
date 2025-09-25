@@ -178,10 +178,17 @@ cd OpenTopoMap/mapnik
 Get the generalized water polygons from http://openstreetmapdata.com/:
 ```
 mkdir data && cd data
+<<<<<<< HEAD
 wget http://data.openstreetmapdata.com/water-polygons-generalized-3857.zip
 wget http://data.openstreetmapdata.com/water-polygons-split-3857.zip
 unzip water-polygons-generalized-3857.zip
+=======
+wget https://osmdata.openstreetmap.de/download/water-polygons-split-3857.zip
+wget https://osmdata.openstreetmap.de/download/simplified-water-polygons-split-3857.zip
+
+>>>>>>> origin/sly-version
 unzip water-polygons-split-3857.zip
+unzip simplified-water-polygons-split-3857.zip
 ```
 
 ## Configure Python 3 as default
