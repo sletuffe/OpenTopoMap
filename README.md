@@ -3,7 +3,9 @@ OpenTopoMap
 OpenTopoMap is a topographic map style out of data from OpenStreetMap and SRTM. If you are interested in building your own OpenTopoMap, see the beginner's guides for [a tile server](mapnik/README.md).
 
 ### Mapnik
-The main OpenTopoMap is a mapnik style. As of 2025-09-25 2 world wide instances exists that I know of : the "main one" is at https://opentopomap.org, and a secondary backup one, whose git repo and REAMDE is the one you are reading right now, visible at https://maps.refuges.info/?layers=0B0 gives you nice features like a search function or loading your gpx tracks. Futhermore, OpenTopoMap can be included into other applications. See https://opentopomap.org/about#verwendung for information on usage. The license of the online map is CC-BY-SA.
+The main OpenTopoMap is a mapnik style. As of 2025-09-25 2 world wide instances exists that I know of : the "main one" is at https://opentopomap.org, and a secondary backup one, whose git repo and REAMDE is the one you are reading right now, visible at https://maps.refuges.info/?layers=0B0 Futhermore, OpenTopoMap can be included into other applications (Well, as of now 2025-09-25, the server maps.refuges.info isn't powerfull enough, so please don't use it for high tile usage).
+There isn't any written Usage policy right now, so in the mean time, use the same as the OpenStreetMap Tile usage policy :  https://operations.osmfoundation.org/policies/tiles/
++ be warn that in case of high usage slowing the server, I might bloc your accesses
 
 The online renderer is based on Mapnik. All necessary files are available to build your own OpenTopoMap server.
 
