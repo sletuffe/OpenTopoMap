@@ -585,7 +585,7 @@
 	<Layer name="symbols-saddle">
 		<StyleName>symbols-saddle</StyleName>
 		<Datasource>
-			<Parameter name="table">(SELECT way,"natural",direction,name,ele FROM planet_osm_point where ("natural"='saddle' or "natural"='col' or "natural"='notch') AND direction SIMILAR TO '[0-9]+') AS symbols </Parameter>
+			<Parameter name="table">(SELECT way,"natural",direction,name,ele FROM planet_osm_point where ("natural"='saddle' or "natural"='col' or "natural"='notch') ) AS symbols </Parameter>
 			<Parameter name="dbname">gis</Parameter>
 			&postgis-settings;
 		</Datasource>
