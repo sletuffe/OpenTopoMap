@@ -5,7 +5,7 @@ OpenTopoMap is a topographic map style out of data from OpenStreetMap and SRTM. 
 
 As of 2025-09-25 2 world wide instances exists that I know of : 
 * The "main one" is at https://opentopomap.org
-* A secondary backup one, whose git repo and README is the one you are reading right now, visible at https://openmaps.fr/?layers=0B0 
+* A secondary backup one, whose git repo and README is the one you are reading right now, visible at https://openmaps.fr/#opentopomap-r
 
 This instance of OpenTopoMap can be used in other applications (Well, as of now 2025-09-25, the tile.openmaps.fr server isn't powerfull enough, so please don't use it for high tile usage).
 If you include tiles from tile.openmaps.fr in your project, you must read and accept the [Tile usage policy](https://openmaps.fr/tile-usage-policy.html) where you will also find the URLs for
