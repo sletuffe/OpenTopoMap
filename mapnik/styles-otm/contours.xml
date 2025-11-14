@@ -1,7 +1,7 @@
 <Style name="contours">
   <!-- 100 m -->
   <Rule>
-    &maxscale_zoom12;
+    &maxscale_zoom11;
     &minscale_zoom12;
     <Filter>([ele] % 100 = 0)</Filter>
     <LineSymbolizer stroke="#c45700" stroke-width="0.4" />
