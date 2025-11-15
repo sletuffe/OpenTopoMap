@@ -193,7 +193,8 @@
 			&postgis-settings;
 		</Datasource>
 	</Layer>
-	
+  
+  &contours;  
 	&basemap-sea;
 	
 	<Layer name="road-areas">
@@ -288,9 +289,7 @@
 			&postgis-settings;
 		</Datasource>
 	</Layer>
-  
-  &contours;
-	
+  	
 	<Layer name="borders-lowzoom">
 		<StyleName>borders-lowzoom</StyleName>
 		<Datasource>
