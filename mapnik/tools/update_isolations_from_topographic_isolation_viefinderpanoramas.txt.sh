@@ -1,7 +1,7 @@
 #Alternatively, is the isolations calculation is too long, you can download the computed dominance from :
 # https://geo.dianacht.de/topo/topographic_isolation_viefinderpanoramas.txt
 
-db="gis"
+. $(dirname $0)/config.sh
 
 echo "creating the otm_isolation column to hold isolation information of peaks..."
 echo "ALTER TABLE planet_osm_point ADD COLUMN otm_isolation text;" | psql $db

@@ -17,8 +17,9 @@
 # The first run may take a hour, following runs some seconds.
 #
 
+. $(dirname $0)/config.sh
 
-DBname='gis'
+DBname=$db
 toolpath='mapnik/tools'
 demfile='mapnik/dem/dem-srtm.tiff'
 

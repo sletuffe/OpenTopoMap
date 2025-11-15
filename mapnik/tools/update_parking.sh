@@ -6,8 +6,7 @@
 # database.
 #
 
-
-DBname='gis'
+. $(dirname $0)/config.sh
 
 ###### Prepare #########
 #

@@ -10,6 +10,9 @@
 # Tirex must me stopped while this is running.
 #
 
+. $(dirname $0)/config.sh
+
+
 LOGDIR="/home/otmuser/logs/"
 WORKDIR="/home/otmuser/data/updates/"
 
@@ -69,7 +72,7 @@ if [ $i = 0 ]; then
    find $WORKDIR -name "expire.list*" -mtime +42 -exec rm {} \;
    d=`date +"%Y-%m-%d %H:%M:%S"`
    echo "$d starting osm2pgsql; see logs in osm2pgsql.log and osm2pgsql.err"
-   /usr/local/bin/osm2pgsql --append --slim -d gis -C 16000 \
+   /usr/local/bin/osm2pgsql --append --slim -d $db -C 16000 \
      --tablespace-slim-data hdd --tablespace-slim-index hdd --number-processes 5 \
      --flat-nodes /mnt/database/flat-nodes/gis-flat-nodes.bin \
      --style ~/OpenTopoMap/mapnik/osm2pgsql/opentopomap.style \
@@ -101,23 +104,23 @@ if [ $i = 0 ]; then
     d=`date +"%Y-%m-%d %H:%M:%S"`
     echo "$d option $1 was set..."
     echo "$d arealabel.sql; see logs in arealabel.log and arealabel.err"
-    psql gis < arealabel.sql >$LOGDIR/arealabel.log 2> $LOGDIR/arealabel.err
+    psql $db < arealabel.sql >$LOGDIR/arealabel.log 2> $LOGDIR/arealabel.err
     d=`date +"%Y-%m-%d %H:%M:%S"`
     echo "$d update_lowzoom.sh; see logs in lowzoom.log and lowzoom.err"
     ./update_lowzoom.sh >$LOGDIR/lowzoom.log 2>$LOGDIR/lowzoom.err
     d=`date +"%Y-%m-%d %H:%M:%S"`
     echo "$d clean isolations and directions"
-    psql gis -c "UPDATE planet_osm_point SET otm_isolation=NULL WHERE \"natural\" IN ('peak','volcano');"  >/dev/null 2>/dev/null
-    psql gis -c "UPDATE planet_osm_point SET direction=NULL     WHERE (railway IN ('station','halt'));"    >/dev/null 2>/dev/null
-    psql gis < pitchicon.sql > /dev/null 2>/dev/null
+    psql $db -c "UPDATE planet_osm_point SET otm_isolation=NULL WHERE \"natural\" IN ('peak','volcano');"  >/dev/null 2>/dev/null
+    psql $db -c "UPDATE planet_osm_point SET direction=NULL     WHERE (railway IN ('station','halt'));"    >/dev/null 2>/dev/null
+    psql $db < pitchicon.sql > /dev/null 2>/dev/null
     d=`date +"%Y-%m-%d %H:%M:%S"`
     echo "$d update_parking.sh; see logs in parking.log and parking.err"
     ./update_parking.sh >$LOGDIR/parking.log 2>$LOGDIR/parking.err
     d=`date +"%Y-%m-%d %H:%M:%S"`
     echo "$d grants to tirex" 
-    psql -d gis -c 'GRANT SELECT ON ALL TABLES IN SCHEMA public TO tirex;' > /dev/null 2>/dev/null
+    psql -d $db -c 'GRANT SELECT ON ALL TABLES IN SCHEMA public TO tirex;' > /dev/null 2>/dev/null
     psql -d lowzoom -c 'GRANT SELECT ON ALL TABLES IN SCHEMA public TO tirex;' > /dev/null 2>/dev/null
-    psql -d gis -c 'GRANT CONNECT ON DATABASE gis TO tirex;' > /dev/null 2>/dev/null
+    psql -d $db -c "GRANT CONNECT ON DATABASE $db TO tirex;" > /dev/null 2>/dev/null
 #
 # get coeastlines
 #    
@@ -163,8 +166,8 @@ if [ $i = 0 ]; then
    ./update_isolations.sh >> $LOGDIR/isolations.log 2>>$LOGDIR/isolations.err
    d=`date +"%Y-%m-%d %H:%M:%S"`
    echo "$d stationdirection.sql viewpointdirection.sql; see logs in directions.log and directions.err"
-   psql gis < stationdirection.sql   > $LOGDIR/directions.log 2>$LOGDIR/directions.err
-   psql gis < viewpointdirection.sql >> $LOGDIR/directions.log 2>>$LOGDIR/directions.err
+   psql $db < stationdirection.sql   > $LOGDIR/directions.log 2>$LOGDIR/directions.err
+   psql $db < viewpointdirection.sql >> $LOGDIR/directions.log 2>>$LOGDIR/directions.err
    d=`date +"%Y-%m-%d %H:%M:%S"`
    echo "$d used space on fs"
    df -h | grep "database\|tiles"

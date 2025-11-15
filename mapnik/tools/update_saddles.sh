@@ -12,15 +12,16 @@
 
 # Constants: Name of the database, path tools and DEM file
 
-DBname='gis'
+. $(dirname $0)/config.sh
+
 toolpath='mapnik/tools'
 demfile='mapnik/dem/dem-srtm.tiff'
 
 cd ~/OpenTopoMap/
 
-psql -A -t -F ";" $DBname -c \
+psql -A -t -F ";" $db -c \
   "SELECT osm_id,ST_X(ST_Astext(ST_Transform(way,4326))),ST_Y(ST_Astext(ST_Transform(way,4326))),direction \
    FROM planet_osm_point WHERE \"natural\" IN ('saddle','col','notch') AND \
                                (direction IS NULL or direction NOT SIMILAR TO '[0-9]+');;" \
-   | $toolpath/saddledirection -f $demfile -o sql | psql $DBname 
+   | $toolpath/saddledirection -f $demfile -o sql | psql $db
 
