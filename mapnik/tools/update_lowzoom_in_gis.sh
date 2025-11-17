@@ -26,7 +26,7 @@ psql -d $db -c "CREATE OR REPLACE VIEW lowzoom_landuse AS SELECT ST_SimplifyPres
 psql -d $db -c "CREATE TABLE IF NOT EXISTS landuse (way geometry(Geometry,3857), landuse text, \"natural\" text);"
 psql -d $db -c "INSERT INTO landuse SELECT * FROM  lowzoom_landuse;"
 psql -d $db -c "CREATE INDEX IF NOT EXISTS landuse_way_idx ON landuse USING GIST (way);"
-sleep 15	
+sleep 15
 	
 # roads
 echo "Simplifying roads..."
@@ -86,6 +86,12 @@ psql -d $db -c "CREATE INDEX IF NOT EXISTS lakelabels_way_idx ON lakelabels USIN
 echo "Create lines for labels of natural areas..."
 psql -d $db -c "DROP VIEW IF EXISTS lowzoom_natural_lines;"
 psql -d $db -c "DROP VIEW IF EXISTS lowzoom_natural_areas;"
+
+# Those indexes are needed for to following View to run quickly
+psql -d $db -c "CREATE INDEX IF NOT EXISTS planet_osm_polygon_idx ON planet_osm_polygon (osm_id);" &
+psql -d $db -c "CREATE INDEX IF NOT EXISTS planet_osm_line_idx ON planet_osm_line (osm_id);" &
+wait
+
 psql -d $db -c "CREATE OR REPLACE VIEW lowzoom_natural_areas AS SELECT natural_arealabel(osm_id,way) as way,name,areatype,way_area,(hierarchicregions).nextregionsize AS nextregionsize,(hierarchicregions).subregionsize AS subregionsize FROM (SELECT osm_id,way,name,(CASE WHEN \"natural\" IS NOT NULL THEN \"natural\" ELSE \"region:type\" END) AS areatype, way_area, OTM_Next_Natural_Area_Size(osm_id,way_area,way) AS hierarchicregions FROM planet_osm_polygon WHERE (\"region:type\" IN ('natural_area','mountain_area') OR \"natural\" IN ('massif', 'mountain_range', 'valley','couloir','ridge','arete','gorge','canyon')) AND name IS NOT NULL) AS natural_areas;"
 psql -d $db -c "CREATE OR REPLACE VIEW lowzoom_natural_lines AS SELECT way,name,areatype,way_area,(hierarchicregions).nextregionsize AS nextregionsize,(hierarchicregions).subregionsize AS subregionsize FROM (SELECT osm_id,way,name,\"natural\" AS areatype,ST_Length(way)*ST_Length(way)/10 as way_area, OTM_Next_Natural_Area_Size(osm_id,0.0,way) AS hierarchicregions FROM planet_osm_line AS li WHERE \"natural\" IN ('massif', 'mountain_range', 'valley','couloir','ridge','arete','gorge','canyon') AND name IS NOT NULL AND NOT EXISTS (SELECT osm_id FROM planet_osm_polygon AS po WHERE po.osm_id=li.osm_id )) AS natural_lines;"
 
