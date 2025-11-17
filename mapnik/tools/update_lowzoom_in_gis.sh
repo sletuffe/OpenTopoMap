@@ -88,8 +88,8 @@ psql -d $db -c "DROP VIEW IF EXISTS lowzoom_natural_lines;"
 psql -d $db -c "DROP VIEW IF EXISTS lowzoom_natural_areas;"
 
 # Those indexes are needed for to following View to run quickly
-psql -d $db -c "CREATE INDEX IF NOT EXISTS planet_osm_polygon_idx ON planet_osm_polygon (osm_id);" &
-psql -d $db -c "CREATE INDEX IF NOT EXISTS planet_osm_line_idx ON planet_osm_line (osm_id);" &
+psql -d $db -c "CREATE INDEX IF NOT EXISTS planet_osm_polygon_osm_id ON planet_osm_polygon (osm_id);" &
+psql -d $db -c "CREATE INDEX IF NOT EXISTS planet_osm_line_osm_id planet_osm_line (osm_id);" &
 wait
 
 psql -d $db -c "CREATE OR REPLACE VIEW lowzoom_natural_areas AS SELECT natural_arealabel(osm_id,way) as way,name,areatype,way_area,(hierarchicregions).nextregionsize AS nextregionsize,(hierarchicregions).subregionsize AS subregionsize FROM (SELECT osm_id,way,name,(CASE WHEN \"natural\" IS NOT NULL THEN \"natural\" ELSE \"region:type\" END) AS areatype, way_area, OTM_Next_Natural_Area_Size(osm_id,way_area,way) AS hierarchicregions FROM planet_osm_polygon WHERE (\"region:type\" IN ('natural_area','mountain_area') OR \"natural\" IN ('massif', 'mountain_range', 'valley','couloir','ridge','arete','gorge','canyon')) AND name IS NOT NULL) AS natural_areas;"
