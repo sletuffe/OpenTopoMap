@@ -13,36 +13,36 @@
 # Check if hiking is a column of planet_osm_point and planet_osm_polygon, if not, create it
 #
 
-column=`psql -d $DBname -t -c "SELECT attname FROM pg_attribute \
+column=`psql -d $db -t -c "SELECT attname FROM pg_attribute \
          WHERE attrelid = ( SELECT oid FROM pg_class WHERE relname = 'planet_osm_point' ) \
          AND attname = 'hiking';"`
 
 if [ "$column" != " hiking" ] ; then
- psql -d $DBname -c "ALTER TABLE planet_osm_point ADD COLUMN hiking text;"
+ psql -d $db -c "ALTER TABLE planet_osm_point ADD COLUMN hiking text;"
 fi
 
-column=`psql -d $DBname -t -c "SELECT attname FROM pg_attribute \
+column=`psql -d $db -t -c "SELECT attname FROM pg_attribute \
          WHERE attrelid = ( SELECT oid FROM pg_class WHERE relname = 'planet_osm_polygon' ) \
          AND attname = 'hiking';"`
 
 if [ "$column" != " hiking" ] ; then
- psql -d $DBname -c "ALTER TABLE planet_osm_polygon ADD COLUMN hiking text;"
+ psql -d $db -c "ALTER TABLE planet_osm_polygon ADD COLUMN hiking text;"
 fi
 
-column=`psql -d $DBname -t -c "SELECT attname FROM pg_attribute \
+column=`psql -d $db -t -c "SELECT attname FROM pg_attribute \
          WHERE attrelid = ( SELECT oid FROM pg_class WHERE relname = 'planet_osm_point' ) \
          AND attname = 'otm_isolation';"`
 
 if [ "$column" != " otm_isolation" ] ; then
- psql -d $DBname -c "ALTER TABLE planet_osm_point ADD COLUMN otm_isolation text;"
+ psql -d $db -c "ALTER TABLE planet_osm_point ADD COLUMN otm_isolation text;"
 fi
 
-column=`psql -d $DBname -t -c "SELECT attname FROM pg_attribute \
+column=`psql -d $db -t -c "SELECT attname FROM pg_attribute \
          WHERE attrelid = ( SELECT oid FROM pg_class WHERE relname = 'planet_osm_polygon' ) \
          AND attname = 'otm_isolation';"`
 
 if [ "$column" != " otm_isolation" ] ; then
- psql -d $DBname -c "ALTER TABLE planet_osm_polygon ADD COLUMN otm_isolation text;"
+ psql -d $db -c "ALTER TABLE planet_osm_polygon ADD COLUMN otm_isolation text;"
 fi
 
 
@@ -55,7 +55,7 @@ fi
 echo -n "update_parking: update planet_osm_polygon "
 date
 
-psql -d $DBname  -c "UPDATE planet_osm_polygon AS t1 set hiking='_otm_yes' \
+psql -d $db  -c "UPDATE planet_osm_polygon AS t1 set hiking='_otm_yes' \
             WHERE amenity='parking' AND  \
             (access IS NULL OR access IN ('yes','public')) AND \
             (hiking IS NULL OR (hiking!='no' AND hiking!='yes')) AND  \
@@ -69,7 +69,7 @@ psql -d $DBname  -c "UPDATE planet_osm_polygon AS t1 set hiking='_otm_yes' \
 echo -n "update_parking: update planet_osm_point "
 date              
 
-psql -d $DBname  -c "UPDATE planet_osm_point AS t1 set hiking='_otm_yes' \
+psql -d $db  -c "UPDATE planet_osm_point AS t1 set hiking='_otm_yes' \
             WHERE amenity='parking' AND  \
             (hiking IS NULL OR (hiking!='no' AND hiking!='yes')) AND  \
             (access IS NULL OR access IN ('yes','public')) AND \
@@ -88,13 +88,13 @@ date
 
 rm -f /tmp/parking_polygon.csv /tmp/parking_point.csv
 
-psql -A -t -F ";" $DBname  -c "SELECT osm_id,ST_X(ST_CENTROID(way)),ST_Y(ST_CENTROID(way)),way_area::INTEGER \
+psql -A -t -F ";" $db  -c "SELECT osm_id,ST_X(ST_CENTROID(way)),ST_Y(ST_CENTROID(way)),way_area::INTEGER \
       FROM planet_osm_polygon WHERE amenity='parking' AND (hiking='yes' or hiking='_otm_yes');" > /tmp/parking_polygon.csv
       
 echo -n "update_parking: exporting point "
 date
             
-psql -A -t -F ";" $DBname  -c "SELECT osm_id,ST_X(way),ST_Y(way),osm_id \
+psql -A -t -F ";" $db  -c "SELECT osm_id,ST_X(way),ST_Y(way),osm_id \
       FROM planet_osm_point WHERE amenity='parking' AND (hiking='yes' or hiking='_otm_yes');" > /tmp/parking_point.csv
 
 rm -f tmp/parking_point.sql tmp/parking_polygon.sql
@@ -110,8 +110,8 @@ date
 ./parkingisolation.pl planet_osm_polygon /tmp/parking_polygon.csv 5000 > /tmp/parking_polygon.sql
 echo -n "update_parking: updating DB "
 date
-psql $DBname < /tmp/parking_point.sql   >/dev/null 2>>/dev/null
-psql $DBname < /tmp/parking_polygon.sql >/dev/null 2>>/dev/null
+psql $db < /tmp/parking_point.sql   >/dev/null 2>>/dev/null
+psql $db < /tmp/parking_polygon.sql >/dev/null 2>>/dev/null
 
 # cleaning
 #
