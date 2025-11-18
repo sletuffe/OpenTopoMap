@@ -17,7 +17,7 @@ The online renderer is based on Mapnik 3+. All necessary files and instructions 
 OpenTopoMap-Revived
 ===================
 This instance, that I'd like to call OTM-R (for OpenTopoMap-Revived or OpenTopoMap-Raster) for the time beeing, aims to be identical to the main instance's map for now and act as a failover/clone/in place replacement. While hoping to get help or time someday to improve the map itself. 
-Except for a few adjustements :
+Except for a few changes :
 * Contours, hillshading and elevation color was composed and kindly provided by @Yvecai from https://www.opensnowmap.org and based on :
   * ASTER GDEM is a product of METI and NASA
   * SRTM 1 Arc-Second Global
@@ -29,7 +29,7 @@ Except for a few adjustements :
   * Italy – Tinitaly 10m – CC BY 4.0 Tarquini S., I. Isola, M. Favalli, A. Battistini, G. Dotta (2023). Istituto Nazionale di Geofisica e Vulcanologia (INGV).
   * Norway - DTM 10 Terrengmodell (UTM33) – CC BY 4.0 Kartverket
 
-In the process hillshading was made brighter to help readability of contours alitude
+As a collateral dammage hillshading is now brighter than the original, maybe too bright.
 
 * tiff files (color and shade) were merge into a single tiff with overviews to reduce the xml code and files
 * the "contours" table in it's own database was move to the gis database
