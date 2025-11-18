@@ -9,9 +9,8 @@ echo "done"
 echo "creating an index on osm_id because osm2pgsql newer versions does no create it anymore, and we need it to update peak isolation..."
 echo "create index planet_osm_point_osm_id on planet_osm_point (osm_id);" | psql $db
 echo "done"
+echo "Updating isolation on all peaks and Volcanos..."
 wget -q https://geo.dianacht.de/topo/topographic_isolation_viefinderpanoramas.txt -O - | egrep -v '^#' | sed s/"\([0-9]*;\).*;.*;\([0-9]*\)"/"update planet_osm_point set otm_isolation=\2 where osm_id=\1"/g | psql -q $db
-
-echo "The index is not needed after peak isolation update, drop index planet_osm_point_osm_id..."
-echo "drop index planet_osm_point_osm_id;" | psql $db
 echo "done"
+
 
