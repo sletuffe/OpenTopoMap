@@ -13,6 +13,7 @@
 # Check if hiking is a column of planet_osm_point and planet_osm_polygon, if not, create it
 #
 
+
 column=`psql -d $db -t -c "SELECT attname FROM pg_attribute \
          WHERE attrelid = ( SELECT oid FROM pg_class WHERE relname = 'planet_osm_point' ) \
          AND attname = 'hiking';"`
@@ -45,6 +46,8 @@ if [ "$column" != " otm_isolation" ] ; then
  psql -d $db -c "ALTER TABLE planet_osm_polygon ADD COLUMN otm_isolation text;"
 fi
 
+# This index is needed for quick update base on osm_id
+psql -d $db -c "create index IF NOT EXISTS planet_osm_point_osm_id on planet_osm_point (osm_id);"
 
 
 ########## Update ###########
