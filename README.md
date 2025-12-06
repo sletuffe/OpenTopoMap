@@ -1,7 +1,6 @@
 OpenTopoMap
 ===========
-OpenTopoMap is a topographic map style out of data from OpenStreetMap (and various Data Elevation Model). Created by @der-stefan @max-dn and others. If you are interested in building your own OpenTopoMap, see the beginner's guides for [a tile server](mapnik/README.md)
-(but this guide is quite outdated).
+OpenTopoMap is a topographic mapnik 3+ xml (non CartoCss) map style using data from OpenStreetMap contributors and various Data Elevation Model. Created by @der-stefan, @max-dn and others. If you are interested in building your own OpenTopoMap, see the beginner's guides for [a tile server](mapnik/README.md) (but this guide is quite outdated and was made for Ubuntu 16.04 but can be adapted to more modern Linux distributions).
 
 As of 2025-09-25 2 world wide instances exists that I know of : 
 * The "main one" is at https://opentopomap.org
