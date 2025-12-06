@@ -30,9 +30,9 @@ Except for a few changes :
 
 As a collateral dammage hillshading is now brighter than the original, maybe too bright.
 
-* tiff files (color and shade) were merge into a single tiff with overviews to reduce the xml code and files
+* Geotiff files (One for color+shade and one for shade) were merged into two tiff with overviews to reduce the xml code and number of files
 * the "contours" table in it's own database was move to the gis database
 * the lowzooms tables were put back into the gis database
-* the "parking" relevance to hiking trails was abandonned for now (so all parking icons are shown)
-* saddle icons orientation was abondonned for now due to lack of quick disk drives
+* saddle icons orientation needs DEM and fast disk, it was postponed
+* Contours are not shown over lakes or sea, and 0m lines were re-added
 
