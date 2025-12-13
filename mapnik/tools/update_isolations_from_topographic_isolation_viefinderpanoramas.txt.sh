@@ -1,4 +1,4 @@
-#Alternatively, is the isolations calculation is too long, you can download the computed dominance from :
+#Alternatively, if the isolations calculation is too long, you can download the computed dominance from :
 # https://geo.dianacht.de/topo/topographic_isolation_viefinderpanoramas.txt
 
 . $(dirname $0)/config.sh
