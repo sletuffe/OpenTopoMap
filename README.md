@@ -6,7 +6,7 @@ As of 2025-09-25 2 world wide instances exists that I know of :
 * The "main one" is at https://opentopomap.org
 * A secondary backup one, whose git repo and README is the one you are reading right now, [visible at openmaps.fr](https://openmaps.fr/#opentopomap-r/5/46.34693/9.27246)
 
-This instance of OpenTopoMap can be used in other applications (Well, as of now 2025-09-25, the tile.openmaps.fr server isn't powerfull enough, so please don't use it for high tile usage).
+This instance of OpenTopoMap can also be used in other applications.
 If you include tiles from tile.openmaps.fr in your project, you must read and accept the [Tile usage policy](https://openmaps.fr/tile-usage-policy.html) where you will also find the URLs for
 this map style.
 
