@@ -1,17 +1,18 @@
 OpenTopoMap
 ===========
-OpenTopoMap is a topographic mapnik 3+ xml (non CartoCss) map style using data from OpenStreetMap contributors and various Data Elevation Model. Created by @der-stefan, @max-dn and others. If you are interested in building your own OpenTopoMap, see the beginner's guides for [a tile server](mapnik/README.md) (but this guide is quite outdated and was made for Ubuntu 16.04 but can be adapted to more modern Linux distributions).
+OpenTopoMap is a topographic mapnik 3+ xml (non CartoCss) map style using data from OpenStreetMap contributors and various Data Elevation Model. Created by @der-stefan, @max-dn and others. There is an HOWTO [install an OTM tile server](mapnik/README.md) (but this guide is outdated and was made for Ubuntu 16.04. It can be adapted to modern Linux distributions but need a lot of adaptation, As of december 2025 I'm running the openmaps.fr's instance on a Debian 12).
 
-As of 2025-09-25 2 world wide instances exists that I know of : 
-* The "main one" is at https://opentopomap.org
-* A secondary backup one, whose git repo and README is the one you are reading right now, [visible at openmaps.fr](https://openmaps.fr/#opentopomap-r/5/46.34693/9.27246)
+As of 2025-12-18 2 world wide accessible instances exists that I know of : 
+* The "main one" is at https://opentopomap.org (to be partially discontinued in january 2026)
+* One using this repo whose README you are reading right now, [visible at openmaps.fr](https://openmaps.fr/#opentopomap-r/5/46.34693/9.27246)
 
 This instance of OpenTopoMap can also be used in other applications.
 If you include tiles from tile.openmaps.fr in your project, you must read and accept the [Tile usage policy](https://openmaps.fr/tile-usage-policy.html) where you will also find the URLs for
 this map style.
 
-The online renderer is based on Mapnik 3+. All necessary files and instructions are available to build your own OpenTopoMap server.
-
+Map's legend...
+===============
+Can be seen here [OTM-R's map legend](https://openmaps.fr/otm/legend.html)
 
 OpenTopoMap-Revived
 ===================
@@ -28,11 +29,9 @@ Except for a few changes :
   * Italy – Tinitaly 10m – CC BY 4.0 Tarquini S., I. Isola, M. Favalli, A. Battistini, G. Dotta (2023). Istituto Nazionale di Geofisica e Vulcanologia (INGV).
   * Norway - DTM 10 Terrengmodell (UTM33) – CC BY 4.0 Kartverket
 
-As a collateral dammage hillshading is now brighter than the original, maybe too bright.
-
 * Geotiff files (One for color+shade and one for shade) were merged into two tiff with overviews to reduce the xml code and number of files
 * the "contours" table in it's own database was move to the gis database
 * the lowzooms tables were put back into the gis database
-* saddle icons orientation needs DEM and fast disk, it was postponed
+* saddle icons orientation was postponed (all are shown vertical : ][)
 * Contours are not shown over lakes or sea, and 0m lines were re-added
 
