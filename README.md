@@ -2,13 +2,13 @@ OpenTopoMap
 ===========
 OpenTopoMap is a topographic mapnik 3+ xml (non CartoCss) map style using data from OpenStreetMap contributors and various Data Elevation Model. Created by @der-stefan, @max-dn and others.
 
-As of 2025-12-18 2 world wide accessible instances exists that I know of : 
-* The "main one" is at https://opentopomap.org (to be partially discontinued in january 2026)
+As of 2026-01-20 3 world wide accessible instances exists that I know of : 
+* The "main one" is at https://opentopomap.org ("OpenTopoMap backup") limited to zoom 15
+* A fork in a docker container ( https://github.com/krusty82/otm-meins ) with viewer at https://top-o-map.de/
 * One using this repo whose README you are reading right now, [visible at openmaps.fr](https://openmaps.fr/#opentopomap-r/5/46.34693/9.27246)
 
 This instance of OpenTopoMap can also be used in other applications.
-If you include tiles from tile.openmaps.fr in your project, you must read and accept the [Tile usage policy](https://openmaps.fr/tile-usage-policy.html) where you will also find the URLs for
-this map style.
+If you include tiles from tile.openmaps.fr in your project, you must read and accept the [Tile usage policy](https://openmaps.fr/tile-usage-policy.html) where you will also find the URLs for this map style.
 
 Map's legend...
 ===============
