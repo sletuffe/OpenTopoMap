@@ -74,7 +74,6 @@
 	<!ENTITY symbols-saddle SYSTEM "styles-otm/symbols-saddle.xml">
 	<!ENTITY text-roads-ref SYSTEM "styles-otm/text-roads-ref.xml">
 	<!ENTITY text-waterways SYSTEM "styles-otm/text-waterways.xml">
-	<!ENTITY test SYSTEM "styles-otm/test.xml">
 	<!ENTITY % entities SYSTEM "inc/entities.xml.inc">
 	%entities;
 ]>
@@ -155,8 +154,6 @@
 	&symbols-viewpoint;
 	&text-roads-ref;
 	&text-waterways;
-	&test;
-	
 
 	<!-- layers -->
 	
@@ -168,8 +165,6 @@
 			&postgis-settings;
 		</Datasource>
 	</Layer>
-	       
-       
 
 	<Layer name="landuse">
 		<StyleName>landuse</StyleName>
