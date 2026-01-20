@@ -1,9 +1,4 @@
-<!-- TODO:
-	- waterfall
-	- label positions places
-	- railway bridges for others than simple rails
-	- generalize rivers
--->
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map
 [
   <!ENTITY basemap-sea SYSTEM "styles-otm/sea-areas.xml">
@@ -627,9 +622,3 @@
 		</Datasource>
 	</Layer>
 </Map>
-
-<!--
-macros:
-	!scale_denominator!
-	!bbox!
--->
