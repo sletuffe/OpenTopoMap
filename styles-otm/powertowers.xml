@@ -13,7 +13,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[power] = 'tower'</Filter>
 		<PointSymbolizer file="symbols-otm/powertower_z16.png" allow-overlap="true" ignore-placement="true"/>
 	</Rule>
@@ -26,7 +26,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[power] = 'pole'</Filter>
 		<PointSymbolizer file="symbols-otm/powertower_z14.png" allow-overlap="true" ignore-placement="true"/>
 	</Rule>

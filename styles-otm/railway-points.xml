@@ -1,7 +1,7 @@
 <Style name="railway-points">
 	<Rule>
 		&maxscale_zoom14;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[railway] = 'level_crossing'</Filter>
 		<PointSymbolizer file="symbols-otm/railway_crossing.png"/>
 	</Rule>
@@ -14,7 +14,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[railway] = 'station' and ([subway] = 'yes' or [station] = 'subway')</Filter>
 		<PointSymbolizer file="symbols-otm/station_subway.png" />
 	</Rule>

@@ -49,7 +49,7 @@
 <Style name="hillshade-90">
 	<Rule>
 		&maxscale_zoom9;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<RasterSymbolizer comp-op="grain-merge" scaling="bilinear" />
 	</Rule>
 </Style>

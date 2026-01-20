@@ -1,7 +1,7 @@
 <!--<Style name="bathy">
 	<Rule>
 		&maxscale_zoom0;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<RasterSymbolizer opacity="0.9" scaling="bilinear" />
 	</Rule>
 </Style>

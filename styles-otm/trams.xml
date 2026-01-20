@@ -14,7 +14,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[railway] = 'tram'</Filter>
 		<LineSymbolizer stroke="#3f3f3f" stroke-width="1.2" />
 	</Rule>

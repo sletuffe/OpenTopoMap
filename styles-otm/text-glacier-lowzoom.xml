@@ -20,7 +20,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<TextSymbolizer fontset-name="sans-condensed-oblique" size="10" fill="#6199ca" halo-radius="1" halo-fill="rgba(208,248,255,0.8)" max-char-angle-delta="30" smooth="0.5" placement="line">[name]</TextSymbolizer>
 	</Rule>
 </Style>

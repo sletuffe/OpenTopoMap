@@ -48,7 +48,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>(([icon]='soccer' or [icon]='soccer_with_track') and [pitch_area] &lt; 3500)</Filter>
 		<PointSymbolizer allow-overlap="true" ignore-placement="true" file="symbols-otm/sports-soccer.svg" transform="rotate([angle]) scale(0.15525*[labelsizefactor])"/>
 	</Rule>
@@ -60,7 +60,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>(([icon]='soccer' or [icon]='soccer_with_track') and [pitch_area] &gt;= 3500 and [pitch_area] &lt; 10000)</Filter>
 		<PointSymbolizer allow-overlap="true" ignore-placement="true" file="symbols-otm/sports-soccer.svg" transform="rotate([angle]) scale(0.20*[labelsizefactor])"/>
 	</Rule>
@@ -72,7 +72,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>(([icon]='soccer' or [icon]='soccer_with_track') and [pitch_area] &gt;= 10000)</Filter>
 		<PointSymbolizer allow-overlap="true" ignore-placement="true" file="symbols-otm/sports-soccer.svg" transform="rotate([angle]) scale(0.2415*[labelsizefactor])"/>
 	</Rule>
@@ -86,7 +86,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([icon]='tennis')</Filter>
 		<PointSymbolizer allow-overlap="true" ignore-placement="true" file="symbols-otm/sports-tennis.svg" transform="rotate([angle]) scale(0.1035*[labelsizefactor])"/>
 	</Rule>
@@ -100,7 +100,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([icon]='basketball')</Filter>
 		<PointSymbolizer allow-overlap="true" ignore-placement="true" file="symbols-otm/sports-basketball.svg" transform="rotate([angle]) scale(0.0517*[labelsizefactor])"/>
 	</Rule>
@@ -114,7 +114,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([icon]='rugby')</Filter>
 		<PointSymbolizer allow-overlap="true" ignore-placement="true" file="symbols-otm/sports-rugby.svg" transform="rotate([angle]) scale(0.345*[labelsizefactor])"/>
 	</Rule>
@@ -128,7 +128,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([icon]='football')</Filter>
 		<PointSymbolizer allow-overlap="true" ignore-placement="true" file="symbols-otm/sports-foot-us.svg" transform="rotate([angle]) scale(0.207*[labelsizefactor])"/>
 	</Rule>

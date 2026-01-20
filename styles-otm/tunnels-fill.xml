@@ -323,80 +323,80 @@
 <!-- zoom 17 -->
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'motorway' or [highway] = 'trunk' or [highway] = 'primary'</Filter>
 		<LineSymbolizer stroke="#fdd8a0" stroke-width="9.5" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'secondary' or [highway] = 'tertiary'</Filter>
 		<LineSymbolizer stroke="#fdfdc3" stroke-width="9" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'residential' or [highway] = 'unclassified' or [highway] = 'road'</Filter>
 		<LineSymbolizer stroke="white" stroke-width="8" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'living_street' or [highway] = 'pedestrian'</Filter>
 		<LineSymbolizer stroke="white" stroke-width="6" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'motorway_link' or [highway] = 'trunk_link' or [highway] = 'primary_link'</Filter>
 		<LineSymbolizer stroke="#fdd8a0" stroke-width="6" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'secondary_link' or [highway] = 'tertiary_link'</Filter>
 		<LineSymbolizer stroke="#fdfdc3" stroke-width="6" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'raceway'</Filter>
 		<LineSymbolizer stroke="#ffeded" stroke-width="6" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'service' and [service] = null</Filter>
 		<LineSymbolizer stroke="white" stroke-width="6" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'service' and [service] != null</Filter>
 		<LineSymbolizer stroke="white" stroke-width="2.5" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'track' and [tracktype] = 'grade1'</Filter>
 		<LineSymbolizer stroke="white" stroke-width="2.5" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([highway] = 'track' and [tracktype] != 'grade1') or [highway] = 'cycleway' or [highway] = 'path' or [highway] = 'footway'</Filter>
 		<LineSymbolizer stroke="white" stroke-width="2" stroke-linecap="round" />
 	</Rule>
 	
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[oneway] = 'yes' and [length] &lt; 200 and not ([highway] = 'construction' or [highway] = 'proposed')</Filter>
 		<LinePatternSymbolizer file="symbols-otm/oneway.png" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[oneway] = 'yes' and [length] &gt; 200 and not ([highway] = 'construction' or [highway] = 'proposed')</Filter>
 		<LinePatternSymbolizer file="symbols-otm/oneway_long.png" />
 	</Rule>
@@ -419,13 +419,13 @@
 
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([leisure] = 'track' and ( [sport] = 'bobsleigh' or [surface] = 'ice' or [surface] = 'snow' ))</Filter>
 		<LineSymbolizer stroke="#DDEEFF" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.5"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([leisure] = 'track' and ( [sport] = 'bobsleigh' or [surface] = 'ice' or [surface] = 'snow' ))</Filter>
 		<LineSymbolizer stroke="#DDEEFF" stroke-width="3.0" stroke-linecap="round" stroke-opacity="0.5"/>
 	</Rule>
@@ -446,13 +446,13 @@
 
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[attraction]='summer_toboggan'</Filter>
 		<LineSymbolizer stroke="#e0e0e0" stroke-width="2.3" stroke-linecap="round" stroke-opacity="0.5"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[attraction]='summer_toboggan'</Filter>
 		<LineSymbolizer stroke="#e0e0e0" stroke-width="2.8" stroke-linecap="round" stroke-opacity="0.5"/>
 	</Rule>

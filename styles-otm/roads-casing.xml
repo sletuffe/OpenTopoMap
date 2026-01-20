@@ -383,19 +383,19 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'track' and (not ([tracktype] = 'grade1' or [tracktype] = 'grade3' or [tracktype] = 'grade4' or [tracktype] = 'grade5') ) or [highway] = 'cycleway' or ([highway] = 'path' and [surface] = 'asphalt')</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1.5" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'track' and ([tracktype] = 'grade3' or [tracktype] = 'grade4')</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'track' and [tracktype] = 'grade5'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="0.9" stroke-dasharray="4,4" />
 	</Rule>
@@ -406,7 +406,7 @@
 
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([highway] = 'path' and [surface] != 'asphalt') or [highway] = 'footway' or [highway] = 'via_ferrata'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" stroke-opacity="0.05"/>
 	</Rule>
@@ -415,7 +415,7 @@
 
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([trail_visibility] is null or ([trail_visibility]!='no' and [trail_visibility]!='horrible' and [trail_visibility]!='bad')) and ([via_ferrata_scale] is null or [via_ferrata_scale] = '0') and ([sac_scale] is null or [sac_scale] = 'hiking' or [sac_scale] = 'mountain_hiking') and (([highway] = 'path' and [surface] != 'asphalt') or [highway] = 'footway' or [highway] = 'bridleway')</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" stroke-dasharray="1.1,2"/>
 	</Rule>
@@ -425,7 +425,7 @@
 
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([trail_visibility] is null or ([trail_visibility]!='no' and [trail_visibility]!='horrible' and [trail_visibility]!='bad')) and ([via_ferrata_scale] is null or [via_ferrata_scale] = '0') and ([sac_scale] = 'demanding_mountain_hiking' or [sac_scale] = 'alpine_hiking') and ([highway] = 'path' or [highway] = 'footway')</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" stroke-dasharray="1.1,2,1.1,2,1.1,6"/>
 	</Rule>
@@ -434,7 +434,7 @@
 
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([trail_visibility] is null or ([trail_visibility]!='no' and [trail_visibility]!='horrible' and [trail_visibility]!='bad')) and ([via_ferrata_scale] is null or [via_ferrata_scale] = '0') and ([sac_scale] = 'demanding_alpine_hiking' or [sac_scale] = 'difficult_alpine_hiking') and ([highway] = 'path' or [highway] = 'footway')</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" stroke-dasharray="1.1,2,1.1,8"/>
 	</Rule>
@@ -443,7 +443,7 @@
 
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([trail_visibility]='no' or [trail_visibility]='horrible' or [trail_visibility]='bad') and ([via_ferrata_scale] is null or [via_ferrata_scale] = '0') and ([sac_scale] is null or [sac_scale] = 'hiking' or [sac_scale] = 'mountain_hiking') and (([highway] = 'path' and [surface] != 'asphalt') or [highway] = 'footway' or [highway] = 'bridleway')</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" stroke-dasharray="1.1,2" stroke-opacity="0.5"/>
 	</Rule>
@@ -453,7 +453,7 @@
 
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([trail_visibility]='no' or [trail_visibility]='horrible' or [trail_visibility]='bad') and ([via_ferrata_scale] is null or [via_ferrata_scale] = '0') and ([sac_scale] = 'demanding_mountain_hiking' or [sac_scale] = 'alpine_hiking') and ([highway] = 'path' or [highway] = 'footway')</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" stroke-dasharray="1.1,2,1.1,2,1.1,6" stroke-opacity="0.6"/>
 	</Rule>
@@ -462,7 +462,7 @@
 
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([trail_visibility]='no' or [trail_visibility]='horrible' or [trail_visibility]='bad') and ([via_ferrata_scale] is null or [via_ferrata_scale] = '0') and ([sac_scale] = 'demanding_alpine_hiking' or [sac_scale] = 'difficult_alpine_hiking') and ([highway] = 'path' or [highway] = 'footway')</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" stroke-dasharray="1.1,2,1.1,8" stroke-opacity="0.6"/>
 	</Rule>
@@ -473,7 +473,7 @@
 
 	<Rule>
 		&maxscale_zoom15;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([highway] = 'via_ferrata') or (([via_ferrata_scale] != null and [via_ferrata_scale] != '0') and ([highway] = 'path' or [highway] = 'footway'))</Filter>
 		<LineSymbolizer stroke="black" stroke-width="1" stroke-dasharray="1.1,2,1.1,8"/>
 	</Rule>
@@ -532,74 +532,74 @@
 <!-- zoom 17 -->
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'motorway' or [highway] = 'trunk'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="12" stroke-linecap="round" />
 	</Rule>	
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'primary'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="11.5" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'secondary' or [highway] = 'tertiary'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="10.5" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'unclassified' or [highway] = 'residential' or [highway] = 'road'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="9.5" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'raceway'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="8" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([highway] = 'service' and [service] = null) or [highway] = 'living_street' or [highway] = 'pedestrian' or [highway] = 'motorway_link' or [highway] = 'trunk_link' or [highway] = 'primary_link' or [highway] = 'secondary_link' or [highway] = 'tertiary_link'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="7.5" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([highway] = 'track' and [tracktype] = 'grade1') or ([highway] = 'service' and [service] != null)</Filter>
 		<LineSymbolizer stroke="black" stroke-width="4" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] = 'steps'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="3" stroke-dasharray="1.1,2"/>
 	</Rule>
 	
 	<!--<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] != null and [lanes] = '2'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="10" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] != null and [lanes] = '3'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="14" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] != null and [lanes] = '4'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="18" stroke-linecap="round" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[highway] != null and [lanes] &gt; '4'</Filter>
 		<LineSymbolizer stroke="black" stroke-width="22" stroke-linecap="round" />
 	</Rule>-->
@@ -673,7 +673,7 @@
 
     <Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([highway] = 'motorway' or [highway] = 'trunk' or [highway] = 'primary' or [highway] = 'secondary') and ([embankment] = 'yes')</Filter>
 		<LinePatternSymbolizer file="symbols-otm/embankment_15px.png"/>
 	</Rule>
@@ -696,13 +696,13 @@
 
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([leisure] = 'track' and ( [sport] = 'bobsleigh' or [surface] = 'ice' or [surface] = 'snow' ))</Filter>
 		<LineSymbolizer stroke="#333377" stroke-width="3" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>([leisure] = 'track' and ( [sport] = 'bobsleigh' or [surface] = 'ice' or [surface] = 'snow' ))</Filter>
 		<LineSymbolizer stroke="#333377" stroke-width="3.5" />
 	</Rule>
@@ -723,13 +723,13 @@
 
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[attraction]='summer_toboggan'</Filter>
 		<LineSymbolizer stroke="#333333" stroke-width="2.7" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[attraction]='summer_toboggan'</Filter>
 		<LineSymbolizer stroke="#333333" stroke-width="3.2" />
 	</Rule>

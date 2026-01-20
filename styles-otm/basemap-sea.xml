@@ -15,7 +15,7 @@
 <Style name="waterpolys_z11">
 	<Rule>
 		&maxscale_zoom11;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<PolygonSymbolizer fill="#a3dde8" />
 	</Rule>
 </Style>

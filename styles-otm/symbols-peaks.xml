@@ -49,13 +49,13 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>(([natural] = 'peak' or [natural] = 'volcano') and (not [summit:cross] = 'yes'))</Filter>
         <MarkersSymbolizer placement="point" ignore-placement="true" file="symbols-otm/peak.png"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
-		&minscale_zoom17;
+		&minscale_zoom18;
         <Filter>(([natural] = 'peak' or [natural] = 'volcano') and ([summit:cross] = 'yes'))</Filter>
         <MarkersSymbolizer placement="point" ignore-placement="true" file="symbols-otm/summit_cross.png" transform="translate(0 -3)"/>
 	</Rule>

@@ -154,7 +154,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter>[way_area] &lt; 5e7</Filter>
 		<TextSymbolizer size="11" character-spacing="100" spacing="500" fontset-name="sans-oblique" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" placement="line" allow-overlap="false" placement-type="list">[name]
                 <Placement character-spacing="90" dx="0" dy="0"/>

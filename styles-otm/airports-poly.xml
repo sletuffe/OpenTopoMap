@@ -9,7 +9,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
-		&minscale_zoom17;
+		&minscale_zoom18;
 		<Filter> [aeroway] = 'apron' or [aeroway] = 'helipad' or [aeroway] = 'runway' or [aeroway] = 'taxilane' or [aeroway] = 'taxiway'</Filter>
 		<PolygonSymbolizer fill="#dddddd" />
 		<LineSymbolizer stroke="black" stroke-width="0.5" />
