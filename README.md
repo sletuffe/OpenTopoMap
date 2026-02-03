@@ -14,8 +14,8 @@ Map's legend...
 ===============
 Can be seen here [OTM-R's map legend](https://openmaps.fr/otm/legend.html)
 
-OpenTopoMap-Revived
-===================
+OpenTopoMap-R
+=============
 This instance, that I'd like to call OTM-R (for OpenTopoMap-Revived or OpenTopoMap-Raster) for the time beeing, aims to be identical to the main instance's map for now and act as a failover/clone/in place replacement. While hoping to get help or time someday to improve the map itself. 
 Except for a few changes :
 * Contours, hillshading and elevation color was composed and kindly provided by @Yvecai from https://www.opensnowmap.org and based on :
@@ -34,4 +34,5 @@ Except for a few changes :
 * the lowzooms tables were put back into the gis database
 * saddle icons orientation was postponed (all are shown vertical : ][)
 * Contours are not shown over lakes or sea, and 0m lines were re-added
+* Rendering's maximum zoom level was extended from 17 to 18
 
