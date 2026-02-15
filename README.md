@@ -12,7 +12,7 @@ If you include tiles from tile.openmaps.fr in your project, you must read and ac
 
 Map's legend...
 ===============
-Can be seen here [OTM-R's map legend](https://openmaps.fr/otm/legend.html)
+Can be seen here [OTM-R's map legend](https://openmaps.fr/map-legend/opentopomap-legend-en.html)
 
 OpenTopoMap-R
 =============
