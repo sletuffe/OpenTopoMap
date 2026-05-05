@@ -19,7 +19,7 @@ Can be seen here [OTM-R's map legend](https://openmaps.fr/map-legend/opentopomap
 
 OpenTopoMap-R
 =============
-This instance, that I'd like to call OTM-R (for OpenTopoMap-Revived or OpenTopoMap-Raster) for the time beeing, aims to be identical to the main instance's map for now and act as a failover/clone/in place replacement. While hoping to get help or time someday to improve the map itself. 
+This instance, that I'd like to call OTM-R (for OpenTopoMap-Raster) for the time beeing, aims to be almost identical to the original opentopomap.org map.
 Except for a few changes :
 * Contours, hillshading and elevation color was composed and kindly provided by @Yvecai from https://www.opensnowmap.org and based on :
   * ASTER GDEM is a product of METI and NASA
